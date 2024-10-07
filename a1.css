@@ -7,10 +7,6 @@
     font-size: 25px;
     border-radius: 12.5px;
 }
-.menu a:hover {
-    background-color:rgb(128, 128, 128, 0.5);
-    color: black;
-  }
 
 .right {
     float: right;
@@ -72,6 +68,15 @@
   animation:p2 2s forwards;
   z-index: 6;
  }
+ @keyframes p22 {
+  0% {top:30px;font-size: 25px}
+  100% {top:50%;font-size: 50px;}
+}
+
+#p22 {
+animation:p22 1s forwards;
+z-index: 6;
+}
  
 @keyframes p3{
   0%{opacity: 0;}
@@ -97,7 +102,7 @@ iframe {
     height: 355px; /* Viewport-relative units */
     width: 100%;
 }    
- .menu { background-color:rgb(255, 255, 255, 0.5); width: 99%; border:3px solid white;border-radius: 12.5px;z-index: 5;}
+ .menu { background-color:rgb(255, 255, 255, 0.5); width: 99%; border:1px solid black;border-radius: 12.5px;z-index: 5;}
  .menu2 { width: 99%; border-bottom:3px solid white;z-index: 5;}
  .menu2 a {
   display: inline-block;
@@ -142,7 +147,7 @@ iframe {
 .ss {
   color: #fff;
   background-color: #fff;
-  width: 200px;
+  width: 99%;
   padding: 5px;
   font-size: 25px;
   text-decoration: none;
