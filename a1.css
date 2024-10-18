@@ -1,4 +1,8 @@
+.window {
+  width: 500px;
+  height: 500px;
 
+}
 .menu a {
     display: inline-block;
     color: black;
@@ -60,8 +64,8 @@
 
 @keyframes p2 {
     0% {}
-    50% {top:50%;font-size: 50px;}
-    100% {top:30px;font-size: 25px;}
+    50% {top:50%;left: 50%;font-size: 50px;}
+    100% {top:30px;left: 75px;font-size: 25px;}
 }
 
 #p2 {
@@ -69,8 +73,8 @@
   z-index: 6;
  }
  @keyframes p22 {
-  0% {top:30px;font-size: 25px}
-  100% {top:50%;font-size: 50px;}
+  0% {top:30px;left: 75px;font-size: 25px}
+  100% {top:50%;left: 50%;font-size: 50px;}
 }
 
 #p22 {
@@ -154,3 +158,33 @@ iframe {
   border: 1px solid black;
 }
 .ss:hover{opacity: 0.8;}
+
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 0px 0px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000;
+}
+
+.main22 {
+  margin-left: 160px; /* 与 sidenav 的宽度相同 */
+  font-size: 28px; /* 增加文本以启用滚动 */
+  padding: 0px 10px;
+}
