@@ -1,39 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="a1.css">
-    <link rel="stylesheet" href="a1.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="index2.html">
-    <link rel="stylesheet" href="index3.html">
-    <title>FoxComm</title>
-</head>
-<style>  
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    background-size:100% 100%;
-}</style>
-<body style="height: 100%;">
-<a href="#" onclick="iframe.location='index3.html'" class="p1" id="p2"><strong>Fox</strong>Comm</a>
-<div class="main22" id="p3">
-    <div class="sidenav">
-        <a><br></a>
-        <a href="#">测试</a>
-        <a href="#">测试</a>
-        <a href="#">测试</a>
-      </div>
-<div id="p3" class="menu2">
-    <a href="index22.html">刷新</a>
-    <div class="right"><a href="https://afdian.com/a/foxbells">COFFEE</a></div>
-    </div><div style="padding: 10px;"></div>
-<div style="padding: 5px;"></div>
-<div id="p4">
-<iframe name="iframe" src="index3.html" frameborder="0"></iframe>
+<meta charset="UTF-8">
+<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+<title>SakuraOS</title>
+<link rel="stylesheet" href="index.css">
+<script src="cursor.js"></script></head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div style="padding-top"><font color=#fff>
+<h2 href="#" id="hid"></h2><h1>开发者!</h1>
+<iframe name="iframe" src="index-start.html" width="400px" height: "400px" frameborder="0" scrolling="no"></iframe>
 </div>
-</div>
-</body>
+<script type="text/javascript">
+    //创建一个日期对象
+    var dd= new Date();
+    var st =document.getElementById("hid");
+    var hour =dd.getHours();//获取当前时
+    //alert(hour);
+    if(hour>0 && hour<=6){
+        st.innerHTML="凌晨好";
+    }else if(hour>6 && hour<=9){
+        st.innerHTML="上午好";
+    }else if(hour>9 && hour<=12){
+        st.innerHTML="早上好";
+    }else if(hour>12 && hour<=15){
+        st.innerHTML="中午好";
+    }else if(hour>15 && hour<=18){
+        st.innerHTML="下午好";
+    }else if(hour>18 && hour<=21){
+        st.innerHTML="傍晚好";
+    }else if(hour>21 && hour<=24){
+        st.innerHTML="晚上好";
+    }
+    </script>
 </html>
