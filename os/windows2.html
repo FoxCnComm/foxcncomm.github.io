@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+<title>Sakura Community</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="bg.css">
+<script src="cursor.js"></script></head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div style="padding-top"><div align="center";><font color=#fff>
+ <div class="flex-container">
+  <div class="box">
+  <h2 href="#" id="hid"></h2>
+  <h2>欢迎来到樱花树社区</h2>这个社区是狐狸社区的分支！<br><br>
+  </div>
+ </div>
+ <div class="flex-container">
+ <div class="box">
+ 111
+ </div>
+</div>
+<div class="flex-container">
+ <div class="box">
+<h1>广告</h1>
+  </div>
+  <div class="box">
+<h1>广告</h1>
+ </div>
+</div>
+<div class="flex-container">
+ <div class="box"><br>
+©2020-2024 狐狸社区。所有版权。<br><br>
+ </div>
+</div>
+<script type="text/javascript">
+    //创建一个日期对象
+    var dd= new Date();
+    var st =document.getElementById("hid");
+    var hour =dd.getHours();//获取当前时
+    //alert(hour);
+    if(hour>0 && hour<=6){
+        st.innerHTML="凌晨好";
+    }else if(hour>6 && hour<=9){
+        st.innerHTML="上午好";
+    }else if(hour>9 && hour<=12){
+        st.innerHTML="早上好";
+    }else if(hour>12 && hour<=15){
+        st.innerHTML="中午好";
+    }else if(hour>15 && hour<=18){
+        st.innerHTML="下午好";
+    }else if(hour>18 && hour<=21){
+        st.innerHTML="傍晚好";
+    }else if(hour>21 && hour<=24){
+        st.innerHTML="晚上好";
+    }
+    </script>
+  <script>
+    function toggleFullscreen() {
+      var fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
+
+      if (!fullscreenElement) {
+        var element = document.documentElement;
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+    }
+  </script>
+</html>

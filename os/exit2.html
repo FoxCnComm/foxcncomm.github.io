@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+<title>SakuraOS</title>
+<style>
+ *{
+     font-family: sans-serif;
+cursor: url('Arrow.cur'), auto;         
+        }
+body { 
+background-color:#000;
+}
+@keyframes fadeinout {
+  0% {width: 0%;}
+  25% {width: 30%;}
+  50% {width: 60%;}
+  75% {width: 100%;}
+  100% {width: 100%;}
+}
+.dh {
+  animation-name: fadeinout;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.box {
+text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+color: #fff;
+}
+p {
+color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <meta http-equiv="refresh" content="3;url=start.html"><div class="box">
+<h1>正在重启中...</h1><br><progress class="dh" id="file" max="3" value="0"></progress>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+.window {
+  width: 500px;
+  height: 500px;
+
+}
+.menu a {
+    display: inline-block;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 12.5px;
+}
+
+.right {
+    float: right;
+}
+/* 模态（背景）*/
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 留在原地 */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全屏宽度 */
+    height: 100%; /* 全高 */
+    overflow: auto; /* 如果需要启用滚动 */
+    background-color:rgb(0,0,0); /* 后备颜色 */
+    background-color:rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* 模态内容/框 */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 距顶部 5%，距底部 15% 并居中 */
+    border: 5px solid #fff;
+    border-radius: 12.5px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  /* 添加缩放动画 */
+  .animate {
+    -webkit-animation: animatezoom 0.5s;
+    animation: animatezoom 0.5s
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0.5)} 
+    to {transform: scale(1)}
+  }
+
+.p1 {
+    color: black;
+    font-size: 50px;
+    margin:auto;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-decoration: none;
+}
+
+@keyframes p2 {
+    0% {}
+    50% {top:50%;left: 50%;font-size: 50px;}
+    100% {top:30px;left: 75px;font-size: 25px;}
+}
+
+#p2 {
+  animation:p2 2s forwards;
+  z-index: 6;
+ }
+ @keyframes p22 {
+  0% {top:30px;left: 75px;font-size: 25px}
+  100% {top:50%;left: 50%;font-size: 50px;}
+}
+
+#p22 {
+animation:p22 1s forwards;
+z-index: 6;
+}
+ 
+@keyframes p3{
+  0%{opacity: 0;}
+  65%{opacity: 0;}
+  100%{opacity: 1;}
+}
+#p3{
+    animation:p3 3.25s forwards;
+}
+
+@keyframes p4{
+  0%{opacity: 0;}
+  65%{opacity: 0;}
+  100%{opacity: 1;}
+}
+#p4{
+  animation:p4 4s forwards;
+}
+
+iframe {
+    display: block;
+    border: none;
+    height: 355px; /* Viewport-relative units */
+    width: 100%;
+}    
+ .menu { background-color:rgb(255, 255, 255, 0.5); width: 99%; border:1px solid black;border-radius: 12.5px;z-index: 5;}
+ .menu2 { width: 99%; border-bottom:3px solid white;z-index: 5;}
+ .menu2 a {
+  display: inline-block;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 25px;
+}
+.menu2 a:hover {
+  background-color:rgb(128, 128, 128, 0.5);
+  color: black;
+}
+ .box {
+    font-size: 18px;
+    width: 100%;
+    height: 100px;
+    background-color:rgb(255, 255, 255, 0.5);
+    border-radius: 12.5px;
+}
+ .box img{width: 100px;height: 100px;border-radius: 12.5px;  float: left;margin: 0 10px 0 0px;}
+ .box:active {background-color:rgb(128, 128, 128, 0.25);}
+ .box2{width: 400;height: 200; font-size: 25px;}
+ .a2{
+  background-color: #00a2ff;
+  color: white;
+  font-size: 25px;
+  border-radius: 12.5px;
+  text-decoration: none;
+  padding: 5px;
+}
+.a2:hover{
+  opacity: 0.8;
+}
+.a3{
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  border-radius: 12.5px;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+.ss {
+  color: #fff;
+  background-color: #fff;
+  width: 99%;
+  padding: 5px;
+  font-size: 25px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+.ss:hover{opacity: 0.8;}
+
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 0px 0px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000;
+}
+
+.main22 {
+  margin-left: 160px; /* 与 sidenav 的宽度相同 */
+  font-size: 28px; /* 增加文本以启用滚动 */
+  padding: 0px 10px;
+}
