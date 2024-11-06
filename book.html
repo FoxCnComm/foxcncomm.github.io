@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    position: fixed;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.gradient {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee);
+    background-size: 600% 600%;
+    animation: gradientBG 5s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+    /* 遮罩层 */
+    #overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    /* IE9以下不支持rgba模式 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 兼容IE8及以下 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+    display: none;
+  }
+  /* 弹出框主体 */
+  .popup {
+    background-color: #ffffff;
+    max-width: 75%;
+    min-width: 75%;
+    height: 75%;
+    border-radius: 5px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  /* 弹出框的标题 */
+  .popup_title {
+    height: 25px;
+    line-height: 25px;
+    border-bottom: solid 1px #cccccc;
+  }
+  /* 弹出框的内容 */
+  .popup_content {
+    height: 75%;
+    line-height: 75%;
+    padding: 15px 20px;
+  }
+</style>
+<body class="gradient">
+    <a class="container" style="font-size: 50px;" onclick="showPopup()"><strong>Fox</strong>Book</a>
+    <p class="container" style="transform: translate(-50%,75%);font-size: 25px;"><strong>狐狸の图书馆</strong></p>
+    <div id="overlay">
+        <div class="popup">
+          <p class="popup_title" style="text-align: right;"><a style="cursor: pointer;" class="cancelBtn" onclick="hidePopup()">&#10006&nbsp;&nbsp;</a>
+          <p class="popup_content" style="text-align: left;"><img src="https://game.gtimg.cn/images/zg/age-16.png" width="75px" height="100px"></p>
+        </div>
+      </div>
+</body>
+<script>
+  function showPopup(){
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+  }
+  function hidePopup(){
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "none";
+  }</script>
+</html>
