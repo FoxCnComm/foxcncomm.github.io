@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FoxSearch</title>
+		<style type="text/css">
+.gradient {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee);
+    background-size: 600% 600%;
+    animation: gradientBG 5s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+			form .text {
+                background-color: rgba(0, 0, 0, 0.15);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,75%);
+				width: 350px;
+				height: 35px;
+				font-size: 16px;
+                border-radius: 15px;
+                color: 000;
+				border: 2px solid #000;
+                position: fixed;
+			}
+			
+			form .search {
+                BACKGROUND-COLOR: transparent;
+				cursor: pointer;
+				text-align: center;
+                border-radius: 15px;
+                border:none;
+                color: black;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 50px;
+			}
+		</style>
+	</head>
+	<body class="gradient">
+		<form target="_blank" method="get" action="https://cn.bing.com/search?q=">
+            <input type="submit" value="FoxSearch" class="search">
+			<input type="text" placeholder="Bing搜索" name="q" class="text" />
+		</form>
+	</body>
+    </html>
