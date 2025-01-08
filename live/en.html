@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live streaming of the fox</title>
+</head>
+<script>
+  function show(){
+    var overlay = document.getElementById("b");
+    overlay.style.display = "block";
+  }
+  function hide(){
+    var overlay = document.getElementById("b");
+    overlay.style.display = "none";
+  }</script>
+<style>
+.a {
+    white-space: nowrap;
+    color: black;
+    position: fixed;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.b
+{
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.25);
+  left: 50%;
+    top: 50%;
+    transform: translate(-50%,65%);
+    position: fixed;
+    text-align: center;
+    border: #000 1px dashed;
+    border-radius: 10px;
+}
+body {
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    background: linear-gradient(-45deg, #fccb90, #d57eeb);
+  }
+</style>
+<body>
+    <a href="https://live.bilibili.com/26049058" class="a" style="font-size: 40px;" target="_blank"><strong>Fox</strong>Live</a>
+    <p class="a" style="transform: translate(-50%,95%);font-size: 18px;"><strong>Happy New Year 2025!</strong></p>
+<div class="b"><p style="font-size: 16px;">Minors can't live stream!<br>Be at least 16 years old!</p></div>
+  </body>
+</html>
