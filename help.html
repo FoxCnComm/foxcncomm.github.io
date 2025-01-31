@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助与支持</title>
+    <style>
+        body{
+            background-color: #bcc1bd;
+        }
+    .m
+{   
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: #000 1px solid;
+}
+  .m a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.m a:hover {
+  background-color: #fff;
+  color: black;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+    </style>
+</head>
+<body>
+    <div class="m">
+        <a href="index.html">狐星社</a>
+        <a href="index2.html">樱花树工作室</a>
+        <a href="login.html">登录</a>
+      </div>
+      <h2>帮助与支持</h2>
+      <h3>什么？</h3>
+      <button class="collapsible">什么是狐星社？</button>
+<div class="content">
+  <p>我不到啊</p>
+</div>
+<button class="collapsible">什么是樱花树工作室？</button>
+<div class="content">
+    <p>我不到啊</p>
+</div>
+<button class="collapsible">什么是FoxBells？</button>
+<div class="content">
+  <p>一个隐形人。</p>
+</div>
+<h3>为什么？</h3>
+<button class="collapsible">为什么要创新？</button>
+<div class="content">
+  <p>因为热爱。</p>
+</div>
+<button class="collapsible">为什么要做网页？</button>
+<div class="content">
+  <p>因为热爱。</p>
+</div>
+<button class="collapsible">为什么不能登录？</button>
+<div class="content">
+  <p>因为网页是静态的，不能使用正常方式制作登录功能，所以现在是装饰品。</p>
+</div>
+<button class="collapsible">为什么不能注册？</button>
+<div class="content">
+  <p>和《为什么不能登录？》一样</p>
+</div>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</body>
+</html>

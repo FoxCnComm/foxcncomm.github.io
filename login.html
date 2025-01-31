@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录FoxStarCommunity</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+        }
+        
+        .p2 {
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(-90deg, #fbc2eb, #a6c1ee);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .m
+{   
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: #000 1px solid;
+}
+  .m a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.m a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.m a.active {
+  background-color: #ffa500;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="m">
+        <a href="index.html">狐星社</a>
+        <a href="index2.html">樱花树工作室</a>
+        <a class="active" href="login.html">登录</a>
+      </div>
+    <div class="container">
+        <p class="p2"><strong>FoxStar</strong>Community</p>
+        <form>
+            <input type="text" id="username" placeholder="账号">
+            <input type="password" id="password" placeholder="密码">
+            <input type="submit" value="登录">
+        </form>
+        <p>有困难？访问<a href="help.html" target="_blank">帮助与支持</a>来帮你！</p>
+    </div>
+</body>
+</html>
