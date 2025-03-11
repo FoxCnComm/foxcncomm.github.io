@@ -6,7 +6,7 @@
     <title>登录FoxStarCommunity</title>
     <style>
         body {
-            background-color: #fff;
+            background-color: #DCDCDC;
             font-family: Arial, sans-serif;
         }
         
@@ -54,48 +54,18 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .m
-{   
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  border: #000 1px solid;
-}
-  .m a {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  font-size: 17px;
-  border-radius: 10px;
-}
-
-.m a:hover {
-  background-color: #fff;
-  color: black;
-}
-
-.m a.active {
-  background-color: #ffa500;
-  color: white;
-}
-
     </style>
 </head>
 <body>
-    <div class="m">
-        <a href="index.html">狐星社</a>
-        <a href="index2.html">樱花树工作室</a>
-        <a class="active" href="login.html">登录</a>
-      </div>
     <div class="container">
-        <p class="p2"><strong>FoxStar</strong>Community</p>
+        <p class="p2"><strong>FoxStar</strong>Community<br>&#8675<br>樱花树工作室</p>
         <form>
-            <input type="button" onclick="location.href='login/login-two.html'" value="跳转第三方登录">
+            <input type="text" id="username" placeholder="账号">
+            <input type="password" id="password" placeholder="密码">
+            <input type="button" onclick="location.href='login-two-load.html'" value="登录">
         </form>
-        <a href="login/reg-two.html">注册一个新用户</a>
-        <p>有困难？访问<a href="help.html" target="_blank">帮助与支持</a>来帮你！</p>
+        <a href="reg-two.html">注册一个新用户</a>
+        <p>有困难？访问<a href="../help.html" target="_blank">帮助与支持</a>来帮你！</p>
     </div>
 </body>
 </html>
