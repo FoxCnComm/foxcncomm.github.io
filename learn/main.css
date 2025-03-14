@@ -1,0 +1,103 @@
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+  transition: background-color .5s;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2980B9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav button {
+    display:block;margin:0 auto;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .closebtn {
+    color: #fff;
+    cursor:pointer;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+transition: margin-left .5s;
+z-index: 100;
+
+}
+.topnav {
+padding: 5px;
+overflow: hidden;
+background-color: #3498DB;
+}
+button {
+position: relative; /* 下文中会用到的相对绝对位置 */
+overflow: hidden;
+transition: background 400ms ease-in-out; /* 设置切换 */
+color: #fff;
+background-color: #f36c60;
+font-family: 'Roboto', sans-serif;
+outline: 0;
+border: 0;
+border-radius: 25px;
+box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+cursor: pointer;
+}
+span.ripple {
+position: absolute; /* 上文中我们提到过的相对绝对位置 */
+border-radius: 50%;
+transform: scale(0);
+animation: ripple 600ms linear;
+background-color: rgba(255, 255, 255, 0.2);
+}
+@keyframes ripple {
+to {
+  transform: scale(4);
+  opacity: 0;
+}
+}
+/* 主容器样式优化 */
+.container {
+max-width: 1200px;
+margin: 10px auto;
+padding: 10px;
+height: auto;
+overflow: hidden; /* 添加清除浮动 */
+}
+
+/* 题目样式优化 */
+.questions {
+display: grid;
+gap: 8px;
+margin-top: 20px;
+}
+
+.main2{
+color: #fff;
+background-color: #7F8C8D;
+padding: 10px 10px 20px 20px;
+border-radius: 25px;
+box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+input{border: 0;}
+input[type="number"]{
+height: 25px;
+padding: 5px;
+border-radius: 25px;
+text-align: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoxStarCommunity-教育平台</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body bgcolor="#BDC3C7">
+    <div id="mySidenav" class="sidenav">
+        <span href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</span>
+        <button onclick="closeNav(),iframe.location='1.html'"class="ripple">主页</button>
+    <div style="padding: 5px;"></div>
+        <button onclick="closeNav(),iframe.location='2.html'"class="ripple">小学口算</button>
+      </div>
+      <div class="topnav">
+        <button style="font-size:30px" onclick="openNav()"class="ripple">&#9776;</button>
+        <p style="display: inline-block;font-size: 15px;"><strong>FoxStar</strong>Community</p>
+    </div>
+      </div>
+      <div id="main">
+        <iframe id="iframe"
+        name="iframe"
+        height="100%"
+        width="100%"
+        src="1.html"
+        frameborder="0"
+        onload="changeFrameHeight()">
+</iframe></div><script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "170px";
+        document.getElementById("main").style.marginLeft = "170px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "#BDC3C7";
+      }
+      </script>
+      <script>
+        function changeFrameHeight() {
+            var iframe = document.getElementById("iframe");
+            iframe.height = document.documentElement.clientHeight;
+        }
+        //onresize属性可以用来获取或设置当前窗口的resize事件的事件处理函数
+        //onresize事件会在窗口或框架被调整大小时发生
+        window.onresize = function() {
+            changeFrameHeight();
+        }
+    </script>
+    <script src="2.js"></script>
+</body>
+</html>
