@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" b="width=device-width, initial-scale=1.0">
+    <title>狐星社 | 帮助与支持</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+  <div class="container">
+      <h1>狐星社 | 帮助与支持</h1>
+      <div class='ad'>
+        <p class='content'>
+            <span>公告：WTF</span>
+        </p>
+    </div>
+    <div class="m">
+      <a href="index.html"><h2>狐星社-FoxBells</h2></a>
+      <a href="index2.html"><h2>樱花树工作室-1w235</h2></a>
+    </div>
+      <h3>什么？</h3>
+      <button class="a">什么是狐星社？</button>
+<div class="b">
+  <p>我不到啊</p>
+</div>
+<button class="a">什么是FoxBells？</button>
+<div class="b">
+  <p>一个隐形人。</p>
+</div>
+<h3>为什么？</h3>
+<button class="a">为什么要创新？</button>
+<div class="b">
+  <p>因为热爱。</p>
+</div>
+<button class="a">为什么要做网页？</button>
+<div class="b">
+  <p>因为热爱。</p>
+</div>
+<button class="a">为什么使用16+标准</button>
+<div class="b">
+  <p>因为16+好</p>
+</div>
+  </div>
+      <script>
+        var coll = document.getElementsByClassName("a");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var b = this.nextElementSibling;
+            if (b.style.maxHeight){
+              b.style.maxHeight = null;
+            } else {
+              b.style.maxHeight = b.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</body>
+</html>
