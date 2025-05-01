@@ -11,19 +11,43 @@
       <h1>狐星社 | 帮助与支持</h1>
       <a href="index.html"><h2>关于狐星社-FoxBells</h2></a>
       <a href="index2.html"><h2>关于樱花树工作室-1w235</h2></a>
+    </div>
+    <h3>什么？</h3>
+    <button class="a">什么是狐星社？</button>
+<div class="b">
+<p>我不到啊</p>
+</div>
+<button class="a">什么是FoxBells？</button>
+<div class="b">
+<p>一个隐形人。</p>
+</div>
+<h3>为什么？</h3>
+<button class="a">为什么要创新？</button>
+<div class="b">
+<p>因为热爱。</p>
+</div>
+<button class="a">为什么要做网页？</button>
+<div class="b">
+<p>因为热爱。</p>
+</div>
+<button class="a">为什么使用16+标准</button>
+<div class="b">
+<p>因为16+好</p>
+</div>
+</div>
   </div>
       <script>
-        var coll = document.getElementsByClassName("collapsible");
+        var coll = document.getElementsByClassName("a");
         var i;
         
         for (i = 0; i < coll.length; i++) {
           coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-              content.style.maxHeight = null;
+            var b = this.nextElementSibling;
+            if (b.style.maxHeight){
+              b.style.maxHeight = null;
             } else {
-              content.style.maxHeight = content.scrollHeight + "px";
+              b.style.maxHeight = b.scrollHeight + "px";
             } 
           });
         }
