@@ -1,0 +1,203 @@
+:root {
+    --bg-color: #F5F5F5;
+    --main-color: #DCDCDC;
+    --main-color-active: dodgerblue;
+    --main-color-hover: #C0C0C0;
+    --main-font-color: #000;
+    --batton-1: #DCDCDC;
+    --batton-2: #D3D3D3;
+    --batton-3: #C0C0C0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #A9A9A9;
+    --main-color: #808080;
+    --main-color-active: #6495ED;
+    --main-color-hover: #ddd;
+    --main-font-color: #fff;
+    --batton-1: #808080;
+    --batton-2: #f1f1f1;
+    --batton-3: #696969;
+  }
+}
+body {
+margin: 0 auto;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--bg-color);
+}
+.content {
+  padding: 15px;
+  max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+}
+.main {
+position: fixed;
+bottom: 0;
+left: 50%;
+transform: translate(-50%, -25%);
+height: 45px;
+width: 600px;
+backdrop-filter: blur(10px);
+display: flex;
+align-items: center;
+z-index: 1000;
+justify-content: center;
+padding: 10px;
+background-color: var(--main-color);
+border-radius: 12px;
+box-shadow:0 0 25px 0.05px black;
+transition: transform 0.25s ease;
+}
+.main a {
+
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  color: var(--main-font-color);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 15px;
+  transform: scale(1);
+  transition: transform 0.25s ease;
+}
+
+.main a:hover {
+  background-color: var(--main-color-hover);
+  color: black;
+  transform: scale(1.15);
+}
+
+.main a.active {
+  background-color: var(--main-color-active);
+  color: white;
+}
+#typed{
+zoom: 1.25;
+}
+.home{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.home2{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 75%);
+}
+.dawn{
+position: fixed;
+bottom: 0;
+text-align: center;
+left: 50%;
+transform: translate(-50%, -150%);
+}
+.dawn a{
+    line-height: 1;
+    text-align: center;
+    zoom: 1.5;
+    text-decoration: none;
+    color: #000;
+}
+.downdh{
+    animation: animate 1.5s linear infinite;
+        }
+
+@keyframes animate {
+            0%,{transform:translateY(0);}
+            50% {transform:translateY(-2.5px);}
+            100% {transform:translateY(0);}
+        }
+.main-home{
+  margin-bottom: 15px;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+}
+.main-home a{
+  background-color: var(--batton-3);
+      transform: scale(1);
+    transition: transform 0.25s ease;
+  display: inline-block;
+  color: var(--main-font-color);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.main-home a:hover {
+  background-color: var(--main-color-hover);
+  color: black;
+  transform: scale(1.2);
+}
+.main-home p {
+  border-radius: 10px;
+  padding: 5px;
+  justify-self: start;
+  margin-left: 5px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.main-home h1 {
+  margin-left: 5px;
+}
+.bh {
+color: #fff;
+background-image: url('https://free.picui.cn/free/2025/07/30/6889abd12c042.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.bh-main {
+  
+  border-radius: 12px;
+  padding: 10px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+background-color: rgba(10, 10, 10, 0.75);
+}
+.bh-main a {
+  background-color: #fff;
+  border: 1px black solid;
+  border-radius: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.bh-main a:hover {
+  background-color: var(--main-color-hover);
+  color: black;
+}
+
+.bh-main a.active {
+  background-color: var(--main-color-active);
+  color: white;
+}
+.ba {
+color: #fff;
+background-image: url('https://free.picui.cn/free/2025/07/30/6889abdb1b958.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+@media screen and (max-width: 600px) {
+  .main {
+width: 100%;
+transform: translate(-50%, 0);
+  }
+}
