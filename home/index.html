@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="main">
-    <a href="../index.html">狐星社</a>
-    <a href="index.html" class="active">这是一个页面</a>
-  </div>
+    <div class="main">
+        <a href="../index.html">
+            <span>🏠</span>
+            <div>狐星社</div>
+        </a>
+        <a href="index.html">
+            <span class="active">🙃</span>
+            <div>这是一个页面</div>
+        </a>
+        </div>
   <div class="content">
       <div class="main-home ba">
       <h1>BA</h1>
@@ -40,6 +46,24 @@
       <a href="#">移动下载</a>
     </div>
   </div>
-</body>
+	<script>
+		// 创建水波纹元素
+		function createRipple(event) {
+			const button = event.currentTarget;
+			const circle = document.createElement("div");
+			button.appendChild(circle);
+
+			// 计算水波纹的位置和大小
+			const diameter = Math.max(button.clientWidth, button.clientHeight);
+			const radius = diameter / 2;
+			circle.style.width = circle.style.height = `${diameter}px`;
+			circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+			circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+
+			// 启动动画
+			circle.classList.add("ripple");
+			setTimeout(() => circle.remove(), 1000);
+		}
+	</script>
 </body>
 </html>

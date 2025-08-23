@@ -1,8 +1,8 @@
 :root {
     --bg-color: #F5F5F5;
-    --main-color: #DCDCDC;
-    --main-color-active: dodgerblue;
-    --main-color-hover: #C0C0C0;
+    --main-color: #bbdefb;
+    --main-color-active: #81D4FA;
+    --main-color-hover: #E1F5FE;
     --main-font-color: #000;
     --batton-1: #DCDCDC;
     --batton-2: #D3D3D3;
@@ -10,10 +10,10 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #A9A9A9;
-    --main-color: #808080;
-    --main-color-active: #6495ED;
-    --main-color-hover: #ddd;
+    --bg-color: #212121;
+    --main-color: #263238;
+    --main-color-active: #546E7A;
+    --main-color-hover: #37474F;
     --main-font-color: #fff;
     --batton-1: #808080;
     --batton-2: #f1f1f1;
@@ -28,15 +28,16 @@ background-color: var(--bg-color);
 .content {
   padding: 15px;
   max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 75px auto;
     height: auto;
 }
 .main {
+backdrop-filter: blur(10px);
 position: fixed;
 bottom: 0;
 left: 50%;
 transform: translate(-50%, -25%);
-height: 45px;
+height: 50px;
 width: 600px;
 backdrop-filter: blur(10px);
 display: flex;
@@ -50,34 +51,39 @@ box-shadow:0 0 25px 0.05px black;
 transition: transform 0.25s ease;
 }
 .main a {
-
   margin-left: 10px;
   margin-right: 10px;
   display: inline-block;
   color: var(--main-font-color);
   text-align: center;
-  padding: 15px;
+  text-decoration: none;
+  font-size: 12.5px;
+  border-radius: 100px;
+}
+.main span {
+  display: inline-block;
+  color: var(--main-font-color);
+  text-align: center;
+  padding: 6px 20px;
   text-decoration: none;
   font-size: 15px;
-  border-radius: 15px;
-  transform: scale(1);
-  transition: transform 0.25s ease;
+  border-radius: 100px;
 }
 
-.main a:hover {
+.main span:hover {
   background-color: var(--main-color-hover);
-  color: black;
-  transform: scale(1.15);
 }
 
-.main a.active {
+.main span.active {
   background-color: var(--main-color-active);
   color: white;
 }
 #typed{
+color:  var(--main-font-color);
 zoom: 1.25;
 }
 .home{
+color:  var(--main-font-color);
 position: absolute;
 top: 50%;
 left: 50%;
@@ -94,18 +100,23 @@ position: fixed;
 bottom: 0;
 text-align: center;
 left: 50%;
-transform: translate(-50%, -150%);
+top: 50%;
+transform: translate(-50%, 50%);
 }
 .dawn a{
+  background-color: #4FC3F7;
     line-height: 1;
     text-align: center;
-    zoom: 1.5;
+    zoom: 1.05;
     text-decoration: none;
-    color: #000;
+    color: black;
+      display: inline-block;
+  text-align: center;
+  padding: 17.5px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 100px;
 }
-.downdh{
-    animation: animate 1.5s linear infinite;
-        }
 
 @keyframes animate {
             0%,{transform:translateY(0);}
@@ -120,23 +131,15 @@ transform: translate(-50%, -150%);
   color: var(--main-font-color);
 }
 .main-home a{
-  background-color: var(--batton-3);
-      transform: scale(1);
-    transition: transform 0.25s ease;
+  background-color: #4FC3F7;
   display: inline-block;
-  color: var(--main-font-color);
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 15px;
-  margin: 5px;
-}
-
-.main-home a:hover {
-  background-color: var(--main-color-hover);
   color: black;
-  transform: scale(1.2);
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  padding: 17.5px 20px;
+  font-size: 15px;
+  border-radius: 100px;
 }
 .main-home p {
   border-radius: 10px;
@@ -148,45 +151,48 @@ transform: translate(-50%, -150%);
 .main-home h1 {
   margin-left: 5px;
 }
+    .button {
+			position: relative;
+			display: inline-block;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #2196F3;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+			overflow: hidden;
+			z-index: 1;
+		}
+
+		/* 水波纹动画 */
+		.ripple {
+			position: absolute;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.7);
+			animation-name: ripple;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			animation-fill-mode: forwards;
+		}
+
+		/* 动画关键帧 */
+		@keyframes ripple {
+			from {
+				transform: scale(0);
+				opacity: 1;
+			}
+			to {
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
 .bh {
 color: #fff;
 background-image: url('https://free.picui.cn/free/2025/07/30/6889abd12c042.png');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-}
-.bh-main {
-  
-  border-radius: 12px;
-  padding: 10px;
-  justify-content: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-background-color: rgba(10, 10, 10, 0.75);
-}
-.bh-main a {
-  background-color: #fff;
-  border: 1px black solid;
-  border-radius: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: inline-block;
-  color: #000;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.bh-main a:hover {
-  background-color: var(--main-color-hover);
-  color: black;
-}
-
-.bh-main a.active {
-  background-color: var(--main-color-active);
-  color: white;
 }
 .ba {
 color: #fff;
@@ -197,6 +203,7 @@ background-position: center;
 }
 @media screen and (max-width: 600px) {
   .main {
+box-shadow:0 0 0 0 black;
 width: 100%;
 transform: translate(-50%, 0);
   }
